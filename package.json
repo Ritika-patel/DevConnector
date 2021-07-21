@@ -1,0 +1,36 @@
+{
+  "name": "devconnector",
+  "version": "1.0.0",
+  "description": "Social network for developers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Ritika Patel",
+  "license": "ISC",
+  "dependencies": {
+    "@callstack/react-theme-provider": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "emotion-theming": "^11.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "gravatar": "^1.8.1",
+    "http-proxy-middleware": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.2",
+    "request": "^2.88.2",
+    "sudo": "^1.0.3",
+    "theme-provider": "^1.0.8",
+    "use-theme": "^0.1.5",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  }
+}
