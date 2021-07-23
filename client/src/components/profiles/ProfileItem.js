@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const ProfileItem = ({
   profile: {
-    // user: { _id, name, avatar },
+ //    user: { _id, name, avatar },
     status,
     company,
     location,
@@ -12,6 +13,7 @@ const ProfileItem = ({
   }
 }) => {
   return (
+    <Fragment>
     <div className='profile bg-light'>
       {/* <img src={avatar} alt='' className='round-img' /> */}
       <div>
@@ -32,6 +34,7 @@ const ProfileItem = ({
         ))}
       </ul>
     </div>
+    </Fragment>
   );
 };
 
@@ -39,4 +42,6 @@ ProfileItem.propTypes = {
   profile: PropTypes.object.isRequired
 };
 
-export default ProfileItem;
+export default connect(
+  null,
+) (ProfileItem);

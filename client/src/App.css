@@ -30,6 +30,13 @@ body {
 
 }
 
+.VI{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+}
+
 a {
   color: var(--primary-color);
   text-decoration: none;
