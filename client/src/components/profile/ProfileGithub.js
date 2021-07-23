@@ -10,7 +10,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
     getGithubRepos(username);
   }, [getGithubRepos, username]);
 
-  //const themeState = useTheme();
+ // const themeState = useTheme();
 
   return (
     <div className='profile-github'>
@@ -19,7 +19,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
         <Spinner />
       ) : (
         repos.map(repo => (
-          <div key={repo._id} className={`repo  p-1 my-1`}>
+          <div key={repo._id} className={`repo bg-white p-1 my-1`}>
             <div>
               <h4>
                 <a

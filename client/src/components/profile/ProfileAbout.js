@@ -1,17 +1,14 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-//import {useTheme} from '../../ThemeContext';
 const ProfileAbout = ({
   profile: {
     bio,
     skills,
     user: { name }
   }
-}) => {
-//const themeState = useTheme();
-  return (
-  <div className={`profile-about p-2`}>
+}) => (
+  <div className='profile-about bg-light p-2'>
     {bio && (
       <Fragment>
         <h2 className='text-primary'>{name.trim().split(' ')[0]}s Bio</h2>
@@ -23,13 +20,13 @@ const ProfileAbout = ({
     <div className='skills'>
       {skills.map((skill, index) => (
         <div key={index} className='p-1'>
-          <i className='fa fa-check' /> {skill}
+          <i className='fas fa-check' /> {skill}
         </div>
       ))}
     </div>
   </div>
 );
-    }
+
 ProfileAbout.propTypes = {
   profile: PropTypes.object.isRequired
 };

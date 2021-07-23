@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 const ProfileTop = ({
   profile: {
@@ -21,34 +20,34 @@ const ProfileTop = ({
       <p>{location && <span>{location}</span>}</p>
       <div className='icons my-1'>
         {website && (
-          <Link href={website} target='_blank' rel='noopener noreferrer'>
+          <a href={website} target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-globe fa-2x' />
-          </Link>
+          </a>
         )}
         {social && social.twitter && (
-          <Link href={social.twitter} target='_blank' rel='noopener noreferrer'>
-            <i className='fa fa-twitter  fa-2x' />
-          </Link>
+          <a href={social.twitter} target='_blank' rel='noopener noreferrer'>
+            <i className='fa fa-twitter fa-2x' />
+          </a>
         )}
         {social && social.facebook && (
-          <Link href={social.facebook} target='_blank' rel='noopener noreferrer'>
+          <a href={social.facebook} target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-facebook fa-2x' />
-          </Link>
+          </a>
         )}
         {social && social.linkedin && (
-          <Link href={social.linkedin} target='_blank' rel='noopener noreferrer'>
+          <a href={social.linkedin} target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-linkedin fa-2x' />
-          </Link>
+          </a>
         )}
         {social && social.youtube && (
-          <Link href={social.youtube} target='_blank' rel='noopener noreferrer'>
+          <a href={social.youtube} target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-youtube fa-2x' />
-          </Link>
+          </a>
         )}
         {social && social.instagram && (
-          <Link href={social.instagram} target='_blank' rel='noopener noreferrer'>
+          <a href={social.instagram} target='_blank' rel='noopener noreferrer'>
             <i className='fa fa-instagram fa-2x' />
-          </Link>
+          </a>
         )}
       </div>
     </div>
