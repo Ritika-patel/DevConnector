@@ -27,7 +27,6 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-
 }
 
 .VI{
@@ -434,11 +433,12 @@ button {
 
 /* Landing Page */
 .landing {
-  position: relative;
-  background: url(./img/showcase.jpg) no-repeat center center/cover;
+  position:relative;
+  background: url(./img/showcase-11_64.jpg) no-repeat center center/cover;
   height: 100vh;
-}
 
+  
+}
 
 .landing-inner {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
@@ -489,7 +489,8 @@ button {
 }
 
 .profile-top img {
-  width: 250px;
+  width: 350px;
+  
 }
 
 .profile-top .icons a {
