@@ -139,7 +139,7 @@
 
 
 
-        <input type="submit" className="btn btn-primary my-1" />
+        <input type="submit" className="btn-1 btn-primary my-1" />
         <Link className="btn-1 btn-light my-1" to="/dashboard">Go Back</Link>
       </form>
     
