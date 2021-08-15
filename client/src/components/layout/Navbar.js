@@ -6,9 +6,6 @@ import { logout } from '../../actions/auth';
 
 const Navbar = ({ auth: { isAuthenticated, loading, user }, logout, profile: { profile } }) => {
 
-
-;
-
   let userId = '#!';
     if(isAuthenticated && user !== null) userId = user._id;
 
