@@ -38,7 +38,7 @@ auth,
           <button
             onClick={e => addLike(_id)}
             type='button'
-            className='btn-1 btn-light'
+            className='btn btn-light'
           >
             <i className='fa fa-thumbs-up' />{' '}
             <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
@@ -46,11 +46,11 @@ auth,
           <button
             onClick={e => removeLike(_id)}
             type='button'
-            className='btn-1 btn-light'
+            className='btn btn-light'
           >
             <i className='fa fa-thumbs-down' />
           </button>
-          <Link to={`/posts/${_id}`} className='btn-1 btn-primary'>
+          <Link to={`/posts/${_id}`} className='btn btn-primary'>
             comment{' '}
             {comments.length > 0 && (
               <span className='comment-count'>{comments.length}</span>
@@ -61,7 +61,7 @@ auth,
             <button
               onClick={e => deletePost(_id)}
               type='button'
-              className='btn-1 btn-danger'
+              className='btn btn-danger'
             >
               <i className='fa fa-times' />
             </button>
