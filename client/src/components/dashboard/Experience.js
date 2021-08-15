@@ -20,7 +20,7 @@ const Experience = ({ experience, deleteExperience }) => {
       <td>
         <button
           onClick={() => deleteExperience(exp._id)}
-          className='btn btn-danger'
+          className='btn-1 btn-danger'
         >
           Delete
         </button>

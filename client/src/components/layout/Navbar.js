@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
-//import { useTheme } from "../../ThemeContext";
 
 const Navbar = ({ auth: { isAuthenticated, loading, user }, logout, profile: { profile } }) => {
 
 
-  //const themeState = useTheme();
+;
 
   let userId = '#!';
     if(isAuthenticated && user !== null) userId = user._id;
@@ -20,22 +19,19 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout, profile: { p
       </li>
         <li>
       <Link to={`/profile/${userId}`}>
-       View Profile
+        Profile
       </Link>
        </li>
       <li>
         <Link to='/posts'>Posts</Link>
       </li>
       <li>
-        <Link to='/dashboard'>
-          <i className='fa fa-user' />{' '}
-          <span className='hide-sm'>Dashboard</span>
+        <Link to='/dashboard'>Dashboard
         </Link>
       </li>
       <li>
-        <a onClick={logout} href='#!'>
-          <i className='fa fa-sign-out' />{' '}
-          <span className='hide-sm'>Logout</span>
+        <a onClick={logout} href='#!'>Logout
+
         </a>
       </li>
     </ul>
@@ -56,7 +52,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout, profile: { p
   );
 
   return (
-    // <div>
+   
     <nav className='navbar bg-dark'>
 
       <h1 className='devconnect'>

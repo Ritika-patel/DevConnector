@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Moment from 'react-moment';
 import { deleteComment } from '../../actions/post';
-//import { useTheme } from '../../ThemeContext';
+
 const CommentItem = ({
   postId,
   comment: { _id, text, name, avatar, user, date },
   auth,
   deleteComment
 }) => {
-//  const themeState = useTheme();
+
 
   return (
   <Fragment>
@@ -31,7 +31,7 @@ const CommentItem = ({
         <button
           onClick={e => deleteComment(postId, _id)}
           type='button'
-          className='btn btn-danger'
+          className='btn-1 btn-danger'
         >
           <i className='fa fa-times' />
         </button>

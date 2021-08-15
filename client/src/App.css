@@ -60,17 +60,23 @@ img {
 }
 
 /* Text Styles*/
-.x-large {
+.x-large,
+.x-large2 {
   
   font-size: 3.4rem;
   line-height: 1.2;
-  margin-bottom: 4rem;
   text-shadow: 2px 2px 5px black;
   color: whitesmoke;
   font-family: 'Permanent Marker', cursive;
   text-transform: uppercase;
   margin-left: 40px;
   margin-right: 40px;
+}
+.x-large{
+  margin-bottom: 4rem;
+}
+.x-large2 {
+  margin-bottom: 2rem;
 }
 
 .large {
@@ -628,11 +634,12 @@ button {
 
   .navbar ul {
     text-align: center;
-    justify-content: center;
+    justify-content: left;
+    
   }
 
   .navbar h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
   }
 
   .navbar .welcome {
@@ -683,4 +690,6 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+
+
 }

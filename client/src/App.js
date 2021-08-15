@@ -10,8 +10,6 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
-// import your fontawesome library
-//import 'font-awesome/css/font-awesome.min.css'
 import './App.css';
 
 
