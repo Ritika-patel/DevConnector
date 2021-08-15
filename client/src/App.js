@@ -1,70 +1,59 @@
 import React, { Fragment, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Navbar from './components/layout/Navbar'
-import Landing from './components/layout/Landing'
-import Register from './components/auth/Register'
-import Login from './components/auth/Login'
-import Alert from './components/layout/Alert';
-import Dashboard from './components/dashboard/Dashboard'
-import CreateProfile from './components/profile-forms/CreateProfile'
- import EditProfile from './components/profile-forms/EditProfile'
-import PrivateRoute from './components/routing/PrivateRoute'
-import AddExperience from './components/profile-forms/AddExperience';
-import AddEducation from './components/profile-forms/AddEducation';
-import Profiles from './components/profiles/Profiles';
- import Profile from './components/profile/Profile';
- import Posts from './components/posts/Posts';
-import Post from './components/post/Post';
-//import NotFound from './components/layout/NotFound';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
+import Routes from './components/routing/Routes';
 
-//Redux
-import { Provider } from 'react-redux'
-import store from './store'
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
 import { loadUser } from './actions/auth';
-import setAuthToken from './utils/setAuthToken'
+import setAuthToken from './utils/setAuthToken';
 
+// import your fontawesome library
+//import 'font-awesome/css/font-awesome.min.css'
 import './App.css';
 
 
-if(localStorage.token){
-    setAuthToken(localStorage.token)
+import styled from "@emotion/styled";
+
+
+const Wrapper = styled("div")`
+  background: ${props => props.theme.background};
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen";
+  h1, h2, h3, h4, h5, h6, p, td, small {
+    color: ${props => props.theme.body};
+  }
+`;
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
 }
-
-
 const App = () => {
-    useEffect(() => {
-        store.dispatch(loadUser())
-    }, [])
 
-    return(
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+
+  return (
     <Provider store={store}>
-    <Router>
-    <Fragment>
-    <Navbar />
-
-    <Route exact path='/' component={Landing} />
-    <section className="container">
-    <Alert />
-        <Switch>
-        <Route exact path='/register' component={Register} />
-        <Route exact path='/login' component={Login} />
-        <Route exact path='/profiles' component={Profiles} />
-       <Route exact path='/profile/:id' component={Profile} />
-        <PrivateRoute exact path='/dashboard' component={Dashboard} />
-        <PrivateRoute exact path='/create-profile' component={CreateProfile} />
-        <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-        <PrivateRoute exact path='/add-experience' component={AddExperience} />
-        <PrivateRoute exact path='/add-education' component={AddEducation} />
-        <PrivateRoute exact path='/posts' component={Posts} />
-        <PrivateRoute exact path='/posts/:id' component={Post} /> 
-        {/* <Route component={NotFound} /> */}
-        </Switch>
-    </section>
-
-    </Fragment> 
-    </Router>
+      <Router>
+        <Fragment>
+        <Wrapper>
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route component={Routes} />
+          </Switch>
+        </Wrapper>
+        </Fragment>
+      </Router>
     </Provider>
-    )
+  );
 }
 
 export default App;
