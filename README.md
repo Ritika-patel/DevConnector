@@ -8,5 +8,5 @@ Developed the APIs effectively,  integrated them into the website, and was a lea
 ![signIn/Signup page](./readmi%20images/signup.jpg)
 ![signIn/Signup page](./readmi%20images/profile.jpg)
 ![signIn/Signup page](./readmi%20images/dashboard.jpg)
-![signIn/Signup page](./readmi%20images/mobile view 1.jpg)
+![signIn/Signup page](./readmi%20images/mobileview1.jpg)
 ![signIn/Signup page](./readmi%20images/mobileview2.jpg)
